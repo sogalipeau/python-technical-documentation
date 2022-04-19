@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <title>CodeCraft: Technical Documentation</title>  
+  </head>
+  
+  <body>
+  
+    <!-- The header and main navigation section -->
+    <header id="header">
+      <div class="logo-main-nav">
+      
+        <!-- Logo -->
+        <div class="logo">CodeCraft</div>
+        
+        <!-- Primary navigation -->
+        <nav class="nav">
+          <ul class="main-nav">
+            <li><a href="#" class="navlink">Courses</a></li>
+            <li><a href="#" class="navlink">Blog</a></li>
+            <li><a href="#" class="navlink">Pricing</a></li>
+            <li class="dropdown">
+              <a href="#" class="navlink dropdown-btn">Resources</a>
+              <div class="dropdown-content">
+                <a href="#">Video tutorials</a>
+                <a href="#">Cheatsheets</a>
+                <a href="#">Community</a>
+                <a href="#">Support center</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!--  page language selection -->
+      <div class="side-nav">
+        <div class="language-selection">
+          <select name="site-language" id="site-language">
+            <option value="Deutsch">Deutsch</option>
+            <option value="English">English</option>
+            <option value="Yoruba">Yoruba</option>
+          </select>
+        </div>
+        
+        <!-- Sign In button -->
+        <div>
+          <a href="#" class="navlink">Log In</a>
+        </div>
+      </div>
+    </header>
+    
+    <!-- *************** -->
+    <!-- Side navigation -->
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li><a href="#Python_Introduction" class="nav-link">Python Introduction</a></li>
+        <li><a href="#Getting_Started" class="nav-link">Getting Started</a></li>
+        <li><a href="#Python_Comments" class="nav-link">Python Comments</a></li>
+        <li><a href="#Python_Variables" class="nav-link">Python Variables</a></li>
+        <li><a href="#Python_Data_Types" class="nav-link">Python Data Types</a></li>
+        <li><a href="#Python_Numbers" class="nav-link">Python Numbers</a></li>
+        <li><a href="#Python_Strings" class="nav-link">Python Strings</a></li>
+        <li><a href="#Python_Lists" class="nav-link">Python Lists</a></li>
+        <li><a href="#Python_Dictionaries" class="nav-link">Python Dictionaries</a></li>
+        <li><a href="#Python_If...Else" class="nav-link">Python If...Else</a></li>
+        <li><a href="#Python_For_Loops" class="nav-link">Python For Loops</a></li>
+        <li><a href="#Python_While_Loops" class="nav-link">Python While Loops</a></li>
+        <li><a href="#Reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
+    
+    <!-- ********************** -->
+    <!-- Main content container -->
+    <main id="main-doc">
+    
+      <!-- Introduction section -->
+      <section class="main-section" id="Python_Introduction">
+        <header>Python Introduction</header>
+        <div class="section-content">
+          <p class="heading">What is Python?</p>
+          <p>Python is a popular programming language. It was
+            created by Guido van Rossum, and released in 1991.
+          </p>
+          <p>It is used for:</p>
+          <ul>
+            <li>web development (server-side),</li>
+            <li>software development,</li>
+            <li>mathematics,</li>
+            <li>system scripting.</li>
+          </ul>
+          <p class="heading">Why Python?</p>
+          <ul>
+            <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+            <li>Python has a simple syntax similar to the English language.</li>
+            <li>Python has syntax that allows developers to write programs with fewer lines than some other
+              programming languages.</li>
+            <li>Python runs on an interpreter system, meaning
+              that code can be executed as soon as it is
+              written. This means that prototyping can be very quick.</li>
+          </ul>
+          <code class="editor-style">
+              print("Hello, World!")
+          </code>
+        </div>
+      </section>
+      
+      <!-- Getting started -->
+      <section class="main-section" id="Getting_Started">
+        <header>Getting Started</header>
+        <div class="section-content">
+          <p class="heading">Python Quickstart</p>
+          <p>Python is an interpreted programming language, this means that as a developer you write Python (.py)
+            files in a text
+            editor and then put those files into the python interpreter to be executed.</p>
+          <p>The way to run a python file is like this on the command line:</p>
+          <code class="cmd-style">
+            C:\Users\Your Name>python helloworld.py
+          </code>
+          <p>Where "helloworld.py" is the name of your python file.</p>
+          <p>You can write your first Python file, called helloworld.py, which can be done in any text editor.</p>
+          <code class="editor-style">
+            print("Hello, World!")
+          </code>
+          <p>Save your file. Open your command line, navigate to the directory where you saved your file, and run:
+          </p>
+          <code class="cmd-style">
+            C:\Users\Your Name>python helloworld.py
+          </code>
+          <p>The output should read:
+          </p>
+          <code class="cmd-style">
+            Hello, World!
+          </code>
+        </div>
+      </section>
+      
+      <!-- Comments -->
+      <section class="main-section" id="Python_Comments">
+			  <header>Python Comments</header>
+			  <div class="section-content">
+				  <p>Comments can be used to explain Python code.<br>
+				   Comments can be used to make the code more readable.<br>
+					 Comments can be used to prevent execution when testing code.
+				  </p>
+				  <p class="heading">Creating a Comment</p>
+				  <p>Comments start with a <code class="intext-style">#</code>, and Python will ignore them:</p>
+				    <code class="editor-style">
+				      <span class="comment-out">#This is a comment</span><br>
+					    print("Hello, World!")
+				    </code>
+				    <p>Comments can be placed at the end of a line, and Python will ignore the rest of the line:</p>
+				    <code class="editor-style">
+					    print("Hello, World!") <span class="comment-out">#This is a comment</span>
+				    </code>
+				    <p>Comments don't have to explain the code, it can also be used to prevent Python from executing the
+						code:</p>
+				    <code class="editor-style">
+					    print("Hello, World!")<br>
+					    <span class="comment-out">#print("Cheers, Mate!")</span>
+				    </code>
+
+				    <p class="heading">Multi Line Comments</p>
+				    <p>Python does not really have a syntax for multi line comments.</p>
+				    <p>To add multiline comment, you could insert a <code class="intext-style">#</code> for each line:
+				    </p>
+				    <code class="editor-style">
+					    <span class="comment-out">#This is a comment<br>
+					    #written in<br>#more than just one line</span><br>
+					    print("Hello, World!")
+				    </code>
+
+				    <p>Or, you can use a multiline string.</p>
+				    <p>Since Python will ignore string literals that are not assigned to a variable, you can add a
+						multiline string (triple
+						quotes) in your code, and place your comment inside it:</p>
+				    <code class="editor-style">
+					    <span class="comment-out">"""<br> This is a comment<br>
+					    written in<br>more than just one line<br>"""</span><br>
+					    print("Hello, World!")
+				    </code>
+			     </div>
+		    </section>
+    
+      <!-- Variables -->
+      <section class="main-section" id="Python_Variables">
+        <header>Python Variables</header>
+        <div class="section-content">
+          <p class="heading">Variables</p>
+          <p>Variables are containers for storing data values.</p>
+          <p class="heading">Creating Variables</p>
+          <p>Python has no command for declaring a variable.</p>
+          <p>A variable is created the moment the moment you assign a value to it.</p>
+          <p>And, variables do not need to be declared with any particular type, and can even change type after
+            they have been set.</p>
+          <code class="editor-style">
+            x = 5 <span class="comment-out"># x is of type int</span><br>
+            y = "John" <span class="comment-out"># y is of type str</span><br>
+            x = "Jane" <span class="comment-out"># x is now of type str</span><br>
+            print(x)<br>
+            print(y)
+          </code>
+
+          <p class="heading">Casting</p>
+          <p>If you want to specify the data type of a variable, do it with casting.</p>
+          <code class="editor-style">
+            x = str(3) <span class="comment-out"># x will be '3'</span><br>
+            y = int(3) <span class="comment-out"># y will be 3</span><br>
+            z = float(3) <span class="comment-out"># z will be 3.0</span><br>
+          </code>
+        </div>
+      </section>
+      
+      <!-- Data types -->
+      <section class="main-section" id="Python_Data_Types">
+        <header>Python Data Types</header>
+			  <div class="section-content">
+          <p class="heading">Built-in Data Types</p>
+          <p>In programming language, data type is an important concept.</p>
+          <p>Variables can store data of different types, and different types can do different things.</p>
+          <p>Python has the following data types built-in by default, in these categories:</p>
+          <ul class="data-type-list">
+            <li>Text Type:&emsp;&emsp;&nbsp;&emsp;&emsp;<code class="intext-style">str</code></li>
+            <li>Numeric
+              Types:&ensp;&emsp;&nbsp;<code class="intext-style">int</code>,&ensp;<code class="intext-style">float</code>,&ensp;<code class="intext-style">complex</code>
+            </li>
+            <li>Sequence
+              Types:&emsp;&nbsp;<code class="intext-style">list</code>,&ensp;<code class="intext-style">tuple</code>,&ensp;<code class="intext-style">range</code>
+            </li>
+            <li>Mapping Type:&emsp;&emsp;&nbsp;<code class="intext-style">dict</code></li>
+            <li>Set
+              Types:&emsp;&emsp;&nbsp;&emsp;&emsp;<code class="intext-style">set</code>,&ensp;<code class="intext-style">frozenset</code>
+            </li>
+            <li>Boolean Type:&emsp;&emsp;&nbsp;<code class="intext-style">bool</code></li>
+          </ul>
+
+          <p class="heading">Getting the Data Type</p>
+          <p>Get the data type of any object using the <code class="intext-style">type()</code> function.</p>
+          <code class="editor-style">
+            x = 5<br>
+            print(type(x))
+          </code>
+			  </div>
+      </section>
+      
+      <!-- Numbers -->
+      <section class="main-section" id=Python_Numbers">
+        <header>Python Numbers</header>
+        <div class="section-content">
+          <p>There are three numeric types in Python:</p>
+          <ul>
+            <li><code class="intext-style">int</code></li>
+            <li><code class="intext-style">float</code></li>
+            <li><code class="intext-style">complex</code></li>
+          </ul>
+          <p>Variables of numeric types are created when you assign a value to them:</p>
+          <code class="editor-style">
+            x = 1 <span class="comment-out"># int</span><br>
+            y = 2.8 <span class="comment-out"># float</span><br>
+            z = 1j <span class="comment-out"># complex</span><br>
+          </code>
+
+          <p class="heading">Type Conversion</p>
+          <p>You can convert from one type to another with the <code class="intext-style">int()</code>,
+            <code class="intext-style">float()</code>, and <code class="intext-style">complex()</code>methods:
+          </p>
+          <code class="editor-style">
+            x = 1 <span class="comment-out"># int</span><br>
+            y = 2.8 <span class="comment-out"># float</span><br>
+            z = 1j <span class="comment-out"># complex</span><br><br>
+            <span class="comment-out">#convert from int to float:</span><br>
+            a = float(x)<br><br>
+            <span class="comment-out">#convert from float to int:</span><br>
+            b = int(y)<br><br>
+            <span class="comment-out">#convert from int to complex:</span><br>
+            c = complex(x)<br><br>
+            print(a)<br>
+            print(b)<br>
+            print(c)
+          </code>
+			  </div>
+      </section>
+      
+      <!-- Strings -->
+      <section class="main-section" id="Python_Strings">
+        <header>Python Strings</header>
+			  <div class="section-content">
+          <p class="heading">Strings</p>
+          <p>Strings in python are surrounded by either single quotation marks, or double quotation marks.</p>
+          <p><code class="intext-style">'hello'</code> is the same as <code class="intext-style">"hello"</code>.
+          </p>
+          <p>You can display a string literal with the <code class="intext-style">print()</code> function:</p>
+          <code class="editor-style">
+            print('hello')<br>
+            print("hello")
+          </code>
+
+          <p class="heading">Assigning String to a Variable</p>
+          <p>Assigning a string to a variable is done with the variable name followed by an equal sign and the
+            string:</p>
+          <code class="editor-style">
+            a = "Guten Morgen"<br>
+            print(a)
+          </code>
+
+          <p class="heading">Multiline Strings</p>
+          <p>You can assign a multiline string to a variable by using three quotes:</p>
+          <code class="editor-style">
+            a = """Guten Morgen,<br>
+                mein Name ist Sanusi.<br>
+                Ich komme aus Deutschland."""<br>
+            print(a)
+          </code>
+
+          <p class="heading">String Length</p>
+          <p>To get the length of a string, use the <code class="intext-style">len()</code> function:</p>
+          <code class="editor-style">
+            a = "Hello, World"<br>
+            print(len(a))
+          </code>
+
+          <p class="heading">Check String</p>
+          <p>To check if a certain phrase or character is present in a string, use the keyword
+            <code class="intext-style">in</code>.</p>
+          <code class="editor-style">
+            txt = "The best things in life are free!"<br>
+            print("free" in text)
+          </code>
+			  </div>
+      </section>
+      
+      <!-- Lists -->
+      <section class="main-section" id="Python_Lists">
+        <header>Python Lists</header>
+			  <div class="section-content">
+          <code class="editor-style">
+            mylist = ["apple", "banana", "cherry"]
+          </code>
+          <p class="heading">List</p>
+          <p>Lists are used to store multiple items in a single variable</p>
+          <p>Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are
+            Tuple, Set, and
+            Dictionary, all with different qualities and usage.</p>
+          <p>Lists are created using square brackets:</p>
+          <code class="editor-style">
+            thislist = ["apple", "banana", "cherry"]<br>
+            print(thislist)
+          </code>
+
+          <p class="heading">Allow Duplicates</p>
+          <p>Since lists are indexed, lists can have items with the same value:</p>
+          <code class="editor-style">
+            thislist = ["apple", "banana", "cherry", "apple", "cherry"]<br>
+            print(thislist)
+          </code>
+
+          <p class="heading">List Items - Data Types</p>
+          <p>List items can be of any data type:</p>
+          <code class="editor-style">
+            list1 = ["apple", "banana", "cherry"]<br>
+            list2 = [1, 2, 3, 4]<br>
+            list3 = [False, True, True]
+          </code>
+			  </div>
+      </section>
+      
+      <!-- *********** -->
+      <!--Dictioanries -->
+      <section class="main-section" id="Python_Dictionaries">
+        <header>Python Dictionaries</header>
+			  <div class="section-content">
+          <code class="editor-style">
+            thisdict = {<br>
+                "brand": "Ford",<br>
+                "model": "Mustang",<br>
+                "year": 1964<br>
+            }
+          </code>
+
+          <p class="heading">Dictionary</p>
+          <p>Dictioanries are used to store values in key:value pairs.</p>
+          <p>A dictionary is a collection, which is ordered, changeable and do not allow duplicates.</p>
+          <p>Dictioanries are written in curly bracelets, and have keys and values:</p>
+          <code class="editor-style">
+            thisdict = {<br>
+                "brand": "Ford",<br>
+                "model": "Mustang",<br>
+                "year": 1964<br>
+            }<br>
+            print(thisdict)
+          </code>
+
+          <p class="heading">Accessing Items</p>
+          <p>You can access the items of a dictionary by referring to its key name, inside square brackets:</p>
+          <code class="editor-style">
+            thisdict = {<br>
+                "brand": "Ford",<br>
+                "model": "Mustang",<br>
+                "year": 1964<br>
+            }<br>
+            print(thisdict["model"])
+          </code>
+          <p>There is also a method called <code class="intext-style">get()</code> that will give you the same
+            result:</p>
+          <code class="editor-style">
+            x = thisdict.get("model")<br>
+            print(x)
+          </code>
+			  </div>
+      </section>
+      
+      <!-- While Loop -->
+      <section class="main-section" id="Python_While_Loops">
+        <header>Python While Loops</header>
+        <div class="section-content">
+          <p class="heading">Python Loops</p>
+          <p>Python loops have two primitive loop commands:</p>
+          <ul>
+            <li><code class="intext-style">while</code> loops</li>
+            <li><code class="intext-style">for</code> loops</li>
+          </ul>
+
+          <p class="heading">The while Loop</p>
+          <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+          <code class="editor-style">
+            i = 1<br>
+            while i &lt; 6:<br>
+            &emsp;print(i)<br>
+            &emsp;i+=1
+          </code>
+          <p class="heading">The break statement</p>
+          <p>With the <code class="intext-style">break</code> statement we can stop the loop even if the while condition is true:</p>
+          <code class="editor-style">
+            i = 1<br>
+            while i &lt; 6:<br>
+            &emsp;print(i)<br>
+            &emsp;if i == 3:<br>
+            &emsp;&emsp;break<br>
+            &emsp;i+=1
+          </code>
+
+          <p class="heading">The break statement</p>
+          <p>With the <code class="intext-style">break</code> statement we can stop the loop even if the while condition is true:
+          </p>
+          <code class="editor-style">
+            i = 1<br>
+            while i &lt; 6:<br>
+            &emsp;i += 1<br>
+            &emsp;if i == 3:<br>
+            &emsp;&emsp;continue<br>
+            &emsp;print(i)
+          </code>
+        </div>
+      </section>
+      
+      <!-- The beginning of the Reference section -->
+		  <section class="main-section" id="Reference">
+			   <header>Reference</header>
+			   <div class="section-content">
+				   <ul>
+					  <li>All documentation on this page is taken from <a
+							href="https://www.w3schools.com/python/default.asp" target="_blank">W3Schools</a></li>
+				   </ul>
+			   </div>
+		   </section>  
+    </main>
+    
+    <!-- JavaCSript Link -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+  </body>
+</html>
