@@ -1,0 +1,339 @@
+:root {
+  --main-text-color: #010A26;
+  --background-hover-color: whitesmoke;
+  --light-gray: lightslategray;
+  --dark-blue: #293040;
+  --main-font: "Raleway";
+  --heading-font: "Fredoka One";
+  --blue-color: #9292a6;
+  --yellow-color: #403273; /*#F2B705;*/
+  --red-color: #F20519;
+  --list-items-color: #03588C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--main-text-color);
+  font-family: var(--main-font, san-serif);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ************** */
+/* Styling the main header and navigation */
+/* ************** */
+#header {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7rem;
+  background-color: var(--yellow-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.logo-main-nav {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  /* border: 1px solid red; */
+}
+
+.logo {
+  width: 20%;
+  color: ghostwhite;
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  letter-spacing: 2px;
+  font-weight: 100;
+  /* border: 1px solid black; */
+}
+
+.nav {
+  width: 70%;
+  /* border: 1px solid blue; */
+}
+
+.main-nav {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.main-nav li .navlink, .navlink {
+  color: var(--light-gray);
+  font-family: var(--main-font, san-serif);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.main-nav li .navlink:hover, .other-nav div .navlink:hover {
+  color: white;
+  font-weight: bold;
+  transition: color .5s, font-weight .5s;
+}
+
+.other-nav {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#site-language {
+  font-size: 1.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+/* dropdown menu */
+li.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 190px;
+  background-color: white;
+  border: 1px solid var(--blue-color);
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2) ;
+  z-index: ;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 1.5rem 1.5rem;
+  color: inherit;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(238, 238, 238, 0.8);
+}
+
+li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ************ */
+/* Page/Secondary navigation */
+/* *********** */
+
+#navbar {
+  position: fixed;
+  top: 7rem;
+  left: 0;
+  height: 100%;
+  width: 26rem;
+  /* max-width: 25rem; */
+  border-right: 0.5px solid silver;
+}
+
+#navbar header {
+  padding: 8px 0;
+  font-size: 2.1rem;
+  text-align: center;
+  margin: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  /* border: 1px solid gainsboro; */
+  /* font-family: var(--heading-font); */
+}
+
+#navbar ul {
+  list-style-type: none;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* border: 1px solid green; */
+}
+
+
+#navbar .nav-link {
+  display: block;
+  font-size: 1.9rem;
+  color: #565759;
+  padding: 1.5rem 2.8rem;
+}
+
+.nav-link:hover {
+  background-color: whitesmoke;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: background-color .1s, font-size .1s, font-weight .1s;
+}
+
+.nav-link:active {
+
+}
+
+/* ************ */
+/* Styling the main content area */
+/* *********** */
+
+#main-doc {
+  margin-left: 26.5rem;
+  padding: 2.5rem ;
+  line-height: 1.9;
+  /* border: 1px solid green; */
+  position: absolute;
+}
+
+#main-doc li {
+  width: 80%;
+}
+
+.main-section {
+  padding-top: 4rem;
+}
+
+.main-section header {
+  font-size: 3.2rem;
+  padding: 1.2rem 0 0;
+}
+
+.section-content {
+  margin: 0 1rem;
+  /* border: 1px solid blue; */
+}
+
+.section-content li {
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  /* border: 1px solid yellow; */
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #f29509;
+  font-weight: 300;
+}
+
+code.editor-style, code.cmd-style, code.error-style {
+  display: block;
+  font-family: courier, monospace;
+  margin: 1.7rem;
+  background: rgba(238, 238, 238, 1);
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.3rem;
+  width: 80%;
+
+}
+
+code.editor-style {
+  border-left: 3px solid #0528f2;
+}
+
+code.cmd-style {
+  background: linear-gradient(to bottom right, gray, black);
+  color: ghostwhite;
+}
+
+code.error-style {
+  border-left: 3px solid;
+  border-color: var(--red-color);
+}
+
+code.intext-style {
+  color: var(--red-color);
+  padding: 0 0.3rem;
+  background-color: rgba(238, 238, 238, 1);
+  font-size: 1.35rem;
+}
+
+
+span.comment-out {
+  color: green;
+}
+
+ul.data-type-list {
+  list-style-type: '> ';
+}
+
+::marker {
+  color: var(--list-items-color);
+}
+
+#Reference ul li a {
+  color: var(--yellow-color);
+}
+
+@media screen and (max-width:776px) {
+
+  .logo-main-nav {
+    width: 100%;
+    jdisplay: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .main-nav {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  #navbar {
+    position: absolute;
+    width: 100%;
+    top: 11.5rem;
+    padding: 0;
+    margin: 0;
+    max-height: 25rem;
+    background-color: white;
+    border: none;
+    border-bottom: 3px double;
+    border-color: var(--blue-color);
+    z-index: 1;
+  }
+
+  #navbar ul {
+    height: 18.2rem;
+  }
+
+  #navbar ul li {
+    border-top: 1px solid gainsboro;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-top: 33rem;
+    margin-left: 0;
+    padding-top: 1rem;
+  }
+
+  .main-section header {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 1.35rem;
+  }
+
