@@ -112,7 +112,7 @@ a:not(#Reference a) {
   transition: background-color 2s;
 }
 
-log-btn:hover {
+.log-btn:hover {
   background-color: var(--indigo-color);
 }
 
