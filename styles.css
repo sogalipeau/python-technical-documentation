@@ -64,6 +64,7 @@ a:not(#Reference a) {
   font-size: 2.1rem;
   font-family: var(--logo-heading-font);
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
 .nav {
