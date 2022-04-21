@@ -2,7 +2,7 @@
   --main-text-color: #010A26;
   --hover-color: whitesmoke;
   --light-gray: lightslategray;
-  --dark-blue: #293040;
+  --indigo-color: indigo;
   --main-font: "Raleway";
   --logo-heading-font: "Fredoka One";
   --blue-color: #0528f2;
@@ -108,7 +108,11 @@ a:not(#Reference a) {
   /* border: 1px solid black; */
   background-color: var(--purple-color);
   padding: 0.7rem 0.9rem;
+  transition: background-color 2s;
 }
+
+log-btn {
+  background-color: var(--indigo-color);
 
 /* change the site language hover background from blue to light gray */
 
