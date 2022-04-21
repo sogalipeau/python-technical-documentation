@@ -112,8 +112,9 @@ a:not(#Reference a) {
   transition: background-color 2s;
 }
 
-log-btn {
+log-btn:hover {
   background-color: var(--indigo-color);
+}
 
 /* change the site language hover background from blue to light gray */
 
@@ -189,10 +190,6 @@ li.dropdown:hover .dropdown-content {
   font-size: 2rem;
   font-weight: 600;
   transition: background-color .1s, font-size .1s, font-weight .1s;
-}
-
-.nav-link:active {
-  color: green;
 }
 
 /* ************ */
