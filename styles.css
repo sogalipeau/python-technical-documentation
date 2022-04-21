@@ -61,7 +61,7 @@ a:not(#Reference a) {
 .logo {
   width: 20%;
   color: var(--purple-color);
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-family: var(--logo-heading-font);
   letter-spacing: 2px;
 }
@@ -81,7 +81,7 @@ a:not(#Reference a) {
   color: gainsboro;
   font-family: var(--main-font, san-serif);
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   letter-spacing: 2px;
 }
 
@@ -95,11 +95,18 @@ a:not(#Reference a) {
   width: 20vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-#site-language {
-  font-size: 1.6rem;
-  padding: 0.2rem 0.5rem;
+#language-select {
+  padding: 0.2rem 0.6rem;
+  font-family: inherit;
+}
+
+.log-btn {
+  /* border: 1px solid black; */
+  background-color: var(--purple-color);
+  padding: 0.7rem 0.9rem;
 }
 
 /* change the site language hover background from blue to light gray */
@@ -112,7 +119,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  width: 200px;
+  min-width: 200px;
   background-color: white;
   border: 1px solid var(--light-gray);
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2) ;
@@ -142,14 +149,15 @@ li.dropdown:hover .dropdown-content {
   top: 7rem;
   left: 0;
   height: 100%;
-  width: 26rem;
+  width: 30rem;
   border-right: 0.5px solid var(--light-gray);
 }
 
 #navbar header {
   padding: 8px 0;
+  padding-left: 1.8rem;
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   margin: 1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -182,18 +190,20 @@ li.dropdown:hover .dropdown-content {
 /* *********** */
 
 #main-doc {
-  margin-left: 26.5rem;
+  margin-left: 34.5rem;
   padding: 2.5rem ;
   line-height: 1.9;
   position: absolute;
 }
 
 #main-doc li {
-  width: 80%;
+  width: 85%;
 }
 
 .main-section {
   padding-top: 4rem;
+  /* border: 1px solid black; */
+  /* width: 80%; */
 }
 
 .main-section header {
@@ -257,11 +267,11 @@ ul.data-type-list {
 }
 
 ::marker {
-  color: var(--list-items-color);
+  color: var(--purple-color);
 }
 
 #Reference ul li a {
-  color: var(--orange-color);
+  color: var(--purple-color);
 }
 
 #Reference ul li a:hover {
@@ -272,8 +282,7 @@ ul.data-type-list {
 @media screen and (max-width:776px) {
 
   #header {
-    /* border: 1px solid blue; */
-    padding: 1rem;
+    padding: 1rem 2.2rem;
     display: flex;
     flex-flow: column-reverse;
  
@@ -284,54 +293,50 @@ ul.data-type-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* flex-direction: column; */
-    /* align-items: center;
-    justify-content: center; */
-    /* border: 1px solid white; */
   }
 
   .logo {
-    font-size: 2.1rem;
+    font-size: 2rem;
     letter-spacing: 1px;
-    /* text-align: center;
-    padding: 1rem 0; */
-    /* border: 1px solid green; */
   }
 
   .main-nav {
     justify-content: flex-end;
     gap: 1.4rem;
-    /* justify-content: center;
-    padding: 1rem 0; */
-    /* border: 1px solid forestgreen; */
   }
 
   .main-nav li .navlink, .navlink {
     letter-spacing: 1px;
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
 
   .other-nav {
     padding: 0.5rem 0;
     justify-content: flex-end;
     gap: 1.4rem;
-    /* border: 1px solid black; */
     width: 100%;
+  }
 
+  .dropdown-content {
+    right: 0;
+    
   }
 
   #navbar {
     position: absolute;
     width: 100%;
-    top: 11.5rem;
+    top: 10rem;
     padding: 0;
     margin: 0;
     max-height: 25rem;
-    background-color: white;
     border: none;
     border-bottom: 3px double;
-    border-color: var(--blue-color);
+    border-color: var(--purple-color);
     z-index: 1;
+  }
+
+  #navbar header {
+    font-size: 2.3rem;
   }
 
   #navbar ul {
@@ -342,6 +347,10 @@ ul.data-type-list {
     border-top: 1px solid gainsboro;
   }
 
+  #navbar .nav-link {
+    font-size: 1.7rem;
+  }
+
   #main-doc {
     position: relative;
     margin-top: 33rem;
@@ -350,13 +359,23 @@ ul.data-type-list {
   }
 
   .main-section header {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 
-  p {
+  .heading {
+    font-size: 2rem;
+  }
+
+  p,
+  .section-content li {
     font-size: 1.35rem;
   }
 
+  code.editor-style,
+  code.cmd-style,
+  code.error-style {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -371,7 +390,6 @@ ul.data-type-list {
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 2rem;
   }
 
   .nav {
@@ -389,18 +407,63 @@ ul.data-type-list {
   .other-nav {
     justify-content: space-between;
   }
+
+  li.dropdown {
+    position: static;
+  }
+
+  .dropdown-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  #navbar {
+    top: 12rem;
+  }
+
+  #navbar header {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 370px) {
+
+  #header {
+    gap: 1rem;
+  }
+
   .main-nav {
-    flex-direction: column;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
 
   .main-nav li .navlink, .navlink {
     font-size: 1.2rem;
   }
 
-  #navbar {
-    top: 22.5rem;
+  #language-select {
+    font-size: 1.12rem;
   }
+
+  #navbar {
+    top: 24rem;
+  }
+
+  #navbar .nav-link {
+    font-size: 1.5rem;
+  }
+
+  #main-doc {
+    margin-top: 45rem;
+  }
+
+  .main-section header {
+    font-size: 2.15rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
 }
