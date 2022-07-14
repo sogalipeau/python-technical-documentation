@@ -60,11 +60,14 @@ a:not(#Reference a) {
 
 .logo {
   width: 20%;
-  color: whitesmoke;
   font-size: 2.1rem;
   font-family: var(--logo-heading-font);
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+.logo a {
+  color: whitesmoke;
 }
 
 .nav {
